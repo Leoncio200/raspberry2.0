@@ -6,9 +6,9 @@ class temperatura:
     def temperatura(): 
         while True:
             sensor = Adafruit_DHT.DHT11 #Cambia por DHT22 y si usas dicho sensor
-            pin = 11 #Pin en la raspberry donde conectamos el sensor
+            pin = 22 #Pin en la raspberry donde conectamos el sensor
             temperatura = Adafruit_DHT.read_retry(sensor, pin)
             
-            print ('Temperatura: ' , temperatura)
+            print ('Temperatura: ' , format(temperatura))
             
-            time.sleep(1) #Cada segundo se evalúa el sensor
+            time.sleep(3) #Cada segundo se evalúa el sensor
